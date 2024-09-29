@@ -2,10 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ExpensesMAUI.Views.AddCategoryPage"
+             xmlns:vm="clr-namespace:ExpensesMAUI.ViewModels"
+            x:DataType="vm:AddCategoryViewModel"
              Title="AddCategoryPage">
-    <ContentPage.Content>
-        <VerticalStackLayout>
-            <Label Text="Not Implemented"/>
-        </VerticalStackLayout>
-    </ContentPage.Content>
+    <VerticalStackLayout Padding="5">
+        <Label Text="Category Title: "/>
+        <Entry Placeholder="Enter Category Title..." Text="{Binding Category.Name}"/>
+        <Button Text="Save Category" Command="{Binding AddCategoryToDBCommand}"/>
+    </VerticalStackLayout>
 </ContentPage>
