@@ -66,10 +66,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Services\Implementation\Sql\" />
-	</ItemGroup>
-
-	<ItemGroup>
 	  <MauiXaml Update="Views\AddCategoryPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

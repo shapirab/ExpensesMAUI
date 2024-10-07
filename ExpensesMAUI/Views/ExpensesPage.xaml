@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:ExpensesMAUI.ViewModels"
              x:Class="ExpensesMAUI.Views.ExpensesPage"
              Title="ExpensesPage">
+    <ContentPage.BindingContext>
+        <vm:ExpensesViewModel/>
+    </ContentPage.BindingContext>
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="add.png" 
-                 Command="{Binding Source={StaticResource viewModel}, Path=AddExpenseCommand}"/>
+                 Command="{Binding AddExpenseCommand}"/>
         <ToolbarItem IconImageSource="category.png" 
-         Command="{Binding Source={StaticResource viewModel}, Path=BackCommand}"/>
+         Command="{Binding BackCommand}"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <ListView ItemsSource="{Binding Source={StaticResource viewModel}, Path=Expenses}">
+        <ListView ItemsSource="{Binding Expenses}">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <TextCell Text="{Binding Name}" Detail="{Binding Category}"/>

@@ -5,6 +5,7 @@
              xmlns:vm="clr-namespace:ExpensesMAUI.ViewModels"
              x:DataType="vm:CategoriesViewModel"
              Title="Categories Page">
+    
     <VerticalStackLayout Margin="16,0">
         <ListView ItemsSource="{Binding Categories}">
             <ListView.ItemTemplate>
