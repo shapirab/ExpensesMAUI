@@ -13,6 +13,11 @@ namespace ExpensesMAUI.Services
     {
         private const string DB_NAME = "expensesDB.db3";
 
+        public LocalDbService()
+        {
+
+        }
+
         public SQLiteAsyncConnection GetConnection()
         {
             return new SQLiteAsyncConnection(Path.Combine(FileSystem.AppDataDirectory, DB_NAME));

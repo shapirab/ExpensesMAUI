@@ -7,10 +7,10 @@ namespace ExpensesMAUI
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute("CategoriesPage", typeof(CategoriesPage));
-            Routing.RegisterRoute("ExpensesPage", typeof(ExpensesPage));
-            Routing.RegisterRoute("AddCategoryPage", typeof(AddCategoryPage));
-            Routing.RegisterRoute("AddExpensePage", typeof(AddExpensePage));
+            Routing.RegisterRoute(nameof(CategoriesPage), typeof(CategoriesPage));
+            Routing.RegisterRoute(nameof(ExpensesPage), typeof(ExpensesPage));
+            Routing.RegisterRoute(nameof(AddCategoryPage), typeof(AddCategoryPage));
+            Routing.RegisterRoute(nameof(AddExpensePage), typeof(AddExpensePage));
         }
     }
 }

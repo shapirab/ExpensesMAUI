@@ -27,6 +27,7 @@ namespace ExpensesMAUI
 
             builder.Services.AddSingleton<CategoriesViewModel>();
             builder.Services.AddSingleton<AddCategoryViewModel>();
+            builder.Services.AddSingleton<ExpensesViewModel>();
 
             builder.Services.AddScoped<ICategoriesService, CategoryService>();
             builder.Services.AddScoped<IExpensesService, ExpenseService>();

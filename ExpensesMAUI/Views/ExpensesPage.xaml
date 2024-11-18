@@ -3,10 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:ExpensesMAUI.ViewModels"
              x:Class="ExpensesMAUI.Views.ExpensesPage"
-             Title="ExpensesPage">
-    <ContentPage.BindingContext>
-        <vm:ExpensesViewModel/>
-    </ContentPage.BindingContext>
+             Title="Expenses Page">
+
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="add.png" 
                  Command="{Binding AddExpenseCommand}"/>
@@ -17,7 +15,7 @@
         <ListView ItemsSource="{Binding Expenses}">
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <TextCell Text="{Binding Name}" Detail="{Binding Category}"/>
+                    <TextCell Text="{Binding Name}" Detail="{Binding Category.Name}"/>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>

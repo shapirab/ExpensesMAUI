@@ -13,5 +13,6 @@ namespace ExpensesMAUI.Models
         public int Id { get; set; }
         public string Name { get; set; }
         public double ExpensesPercentage { get; set; }
+        public List<Expense> Expenses { get; set; }
     }
 }
